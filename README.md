@@ -41,4 +41,23 @@ EchoVerse is a full-featured blogging platform built using the **MERN Stack (Mon
 
 ## 📁 Folder Structure
 
+---
+
+## ⚙️ Setup Instructions
+
+### ✅ Prerequisites
+
+- Node.js & npm
+- MongoDB (Local or Atlas)
+- Git
+
+---
+
+### 📦 Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/amulya1977/EchoVerse.git
+cd EchoVerse
+
+
 
