@@ -1,0 +1,176 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.blogs-main {
+  flex: 1;
+  padding: 40px;
+}
+.search-input {
+  width: 100%;
+  max-width: 500px; /* control max width */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  border-color: #1e1e1e;
+  outline: none;
+  
+}
+
+.search-and-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* spacing between search input and tabs */
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+.tabs .active-tab {
+  border-color: black;
+}
+
+.blog-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00000010;
+}
+
+.blog-banners {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-action {
+  margin-right: 10px;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  text-decoration: underline; /* or none, depending on how your edit link looks */
+}
+
+.blog-action.delete {
+  color: black; /* match Edit link color */
+}
+
+
+
+
+.stats {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: gray;
+}
+
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 130px;
+  }
+
+  .blogs-main {
+    padding: 20px;
+    flex: 1;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 130px;
+    font-size: 14px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-banners {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 250px;
+    font-size: 13px;
+  }
+
+  .blog-details h3 {
+    font-size: 16px;
+  }
+
+  .blog-details p {
+    font-size: 13px;
+  }
+}

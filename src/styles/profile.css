@@ -1,0 +1,289 @@
+:root {
+  --bg-light: #f8f9fa;
+  --bg-white: #fff;
+  --border-color: #ddd;
+  --primary-text: #111;
+  --muted-text: #555;
+  --btn-bg: #000;
+  --btn-text: #fff;
+  --input-border: #ccc;
+  --input-radius: 8px;
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  padding: 24px;
+  background: var(--bg-white);
+  border-right: 1px solid var(--border-color);
+  box-shadow: var(--shadow-light);
+}
+
+.sidebar-section h4 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.sidebar-section li {
+  margin-bottom: 12px;
+}
+
+.sidebar-section li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-text);
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.sidebar-section li a:hover {
+  background: #eaeaea;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Profile Content */
+.profile-container {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* Profile Picture Section */
+.profile-pic-box {
+  flex-shrink: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--input-border);
+  margin-bottom: 12px;
+}
+
+.upload-btn {
+  background: #eee;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Form Section */
+.profile-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-text);
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  font-size: 15px;
+  background-color: #fff;
+  color: var(--primary-text);
+  resize: vertical;
+}
+
+/* Social Inputs */
+.social-input {
+  display: grid;
+  grid-template-columns: 28px 1fr 28px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  text-align: center;
+  font-size: 18px;
+  color: var(--muted-text);
+}
+
+/* Update Button */
+.update-btn {
+  align-self: flex-start;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+/* Hamburger button */
+.hamburger {
+  position: absolute;
+  top: 70px;
+  left: 16px;
+  z-index: 1100;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+/* Sidebar Base */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+/* Show hamburger on small screens */
+
+
+.update-btn:hover {
+  background-color: #222;
+}
+
+@media (max-width: 768px) {
+  .profile-wrapper {
+    flex-direction: row; /* Sidebar left, content right still */
+  }
+
+  .profile-container {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .profile-pic-box {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .upload-btn {
+    font-size: 14px;
+    padding: 10px 6px;
+  }
+
+  .profile-form {
+    width: 90%;
+    padding: 0 10px;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .profile-form input,
+  .profile-form textarea {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .social-input {
+    grid-template-columns: 25px 1fr;
+    gap: 10px;
+  }
+
+  .update-btn {
+  width: 60%;
+  font-size: 15px;
+  display: block;
+  margin: 20px auto; /* ⬅ centers the button */
+}
+
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .update-btn {
+  width: 60%;
+  font-size: 15px;
+  display: block;
+  margin: 20px auto; /* ⬅ centers the button */
+}
+
+
+  .profile-form input,
+  .profile-form textarea {
+    font-size: 13px;
+  }
+
+  .social-input {
+    grid-template-columns: 20px 1fr;
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px; /* hide off-screen */
+    width: 240px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 24px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0; /* slide in */
+  }
+
+  .profile-container {
+    padding-left: 0 !important;
+    flex-direction: column;
+  }
+}
+
+

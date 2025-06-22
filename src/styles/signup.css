@@ -1,0 +1,46 @@
+
+/* src/pages/Signup.css */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: #f9f9f9;
+}
+
+.signup-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.signup-form button {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+   border-radius: 999px;
+  cursor: pointer;
+}
+
+.google-btn {
+  background: #eee;
+  color: black;
+}
+
+.divider {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}

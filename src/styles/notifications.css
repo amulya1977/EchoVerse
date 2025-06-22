@@ -1,0 +1,189 @@
+.notifications-container {
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
+
+.notif-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #111;
+}
+
+.notif-card {
+  background-color: #fdfdfd;
+  padding: 1.2rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.notif-card:hover {
+  background-color: #f0f4fa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.notif-user {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.notif-date {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.no-notifs {
+  text-align: center;
+  color: #999;
+  font-size: 17px;
+  margin-top: 2rem;
+}
+
+.notif-section {
+  margin-bottom: 2rem;
+}
+
+.notif-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.notif-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid #007bff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.actions-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.actions-right span {
+  user-select: none;
+  transition: transform 0.1s ease;
+}
+
+.actions-right span:hover {
+  transform: scale(1.1);
+}
+
+
+.notif-card:hover {
+  background-color: #f1f1f1;
+}
+
+.notif-user {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.notif-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.4rem;
+}
+
+.notif-snippet {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #444;
+}
+
+.no-notifs {
+  font-style: italic;
+  color: #777;
+}
+.blog-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.blog-info-left p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.blog-info-right {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.blog-info-right span {
+  user-select: none;
+  transition: transform 0.1s ease;
+}
+
+.blog-info-right span:hover {
+  transform: scale(1.1);
+}
+
+/* Container adjustments for smaller screens */
+@media (max-width: 768px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .notifications-container {
+    padding: 1rem;
+  }
+
+  .notif-card {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    border-left-width: 3px;
+  }
+
+  .notif-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .notif-snippet {
+    font-size: 0.9rem;
+  }
+
+  .notif-date {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notif-card {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    border-left-width: 2px;
+  }
+
+  .notif-subtitle {
+    font-size: 1rem;
+  }
+
+  .notif-date {
+    font-size: 0.8rem;
+  }
+}

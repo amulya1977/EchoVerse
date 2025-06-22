@@ -1,0 +1,254 @@
+.profile-page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background-color: #fdfdfd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1c1c1c;
+}
+
+.profile-main-content {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  gap: 2.5rem;
+}
+
+/* Left Section: Blog List */
+.blogs-list-section {
+  flex: 2;
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.blog-item-card {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px 0;
+}
+
+.blog-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.blog-item-banner-image {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.blog-item-text {
+  flex: 1;
+}
+
+.blog-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+.blog-item-author {
+  font-weight: 500;
+  color: #333;
+}
+
+.blog-item-date {
+  color: #999;
+  font-style: italic;
+}
+
+.blog-item-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.4rem 0;
+  color: #111;
+}
+
+.blog-item-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+.blog-item-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.blog-item-topics {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.blog-topic-tag {
+  background-color: #f1f1f1;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.blog-item-likes {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Right Section: Sidebar */
+.profile-sidebar-card {
+  flex: 1;
+  max-width: 280px;
+  background-color: #ffffffe9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  
+  height:400px;
+}
+
+.profile-sidebar-header {
+  margin-bottom: 1.5rem;
+}
+
+.emoji-avatar {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.profile-sidebar-username {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.profile-sidebar-name {
+  font-size: 0.92rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.profile-sidebar-joined-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar-stats {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar-bio {
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.profile-sidebar-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.profile-sidebar-social-links a {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.profile-sidebar-social-links a:hover {
+  color: #000;
+}
+
+.social-icon-react {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+@media (max-width: 768px) {
+  .profile-main-content {
+    flex-direction: column-reverse; /* This brings the profile section first */
+    gap: 2rem;
+  }
+
+ .profile-sidebar-card {
+  flex: 1;
+  height: 230px;              /* ↓ Reduced from 290px */
+  max-width: 220px;           /* ↓ Reduced from 280px */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;              /* ↓ Slightly reduced padding */
+  border: 1px solid #e0e0e0;
+  text-align: center;
+    /* Centering */
+  margin: 0 auto;             /* horizontally center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center align the heading */
+}
+
+
+  .blogs-list-section {
+    width: 100%;
+  }
+
+  .blog-item-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .blog-item-banner-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .emoji-avatar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-page-wrapper {
+    padding: 2rem 1rem;
+  }
+}
+
+
+
+
