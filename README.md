@@ -38,6 +38,55 @@ EchoVerse is a full-featured blogging platform built using the **MERN Stack (Mon
 - Cookie-based auth with CORS
 
 ---
+## 📚 EchoVerse API Reference
+
+### 🔐 Authentication & User Session
+- `POST /api/auth/signup` – Register a new user.
+- `POST /api/auth/login` – Login user with email & password.
+- `POST /api/auth/logout` – Logout the current user.
+- `GET /api/me` – Fetch current logged-in user (session-based).
+
+---
+
+### 👤 User Profile
+- `PUT /api/profile` – Update user profile (bio, username, socials).
+- `GET /api/user/:username` – Get public profile by username.
+
+---
+
+### 📦 Blog Management
+- `POST /api/blog/create` – Create a new blog (published/draft).
+- `POST /api/blog/draft` – Save a blog as draft.
+- `GET /api/blogs` – Fetch all blogs (admin/feed).
+- `GET /api/blogs/trending` – Get trending blogs (based on likes/views).
+- `GET /api/blog/myblogs` – Get all blogs created by logged-in user.
+- `GET /api/blog/:id` – Fetch a specific blog (and increment views).
+- `PUT /api/blog/:id` – Publish/Update a blog with description/topics.
+- `PUT /api/blog/edit/:id` – Edit title, topics, banner of a blog (with upload).
+- `DELETE /api/blog/:id` – Delete a blog owned by the user.
+
+---
+
+### 🖼️ File Upload
+- `POST /api/upload` – Upload a blog banner image via `multipart/form-data`.
+
+---
+
+### ❤️ Likes
+- `POST /api/blog/:id/like` – Like/Unlike a blog (toggle by user).
+- `GET /api/blog/:id/like-status` – Check if current user liked this blog.
+
+---
+
+### 💬 Comments
+- `POST /api/blog/:id/comment` – Add a comment to a blog.
+
+---
+
+### 🔔 Notifications
+- `GET /api/notifications` – Fetch all likes/comments on user’s blogs (requires login).
+
+---
 <table>
   <tr>
     <td align="center">
